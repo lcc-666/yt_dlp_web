@@ -8,7 +8,7 @@ def index(request):
 
 def down(request):
     url=request.POST.get("url")
-    if url is "":
+    if url == "":
         return HttpResponse("hello youtubedl")
     else:
         down_video(url)
