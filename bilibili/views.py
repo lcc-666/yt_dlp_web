@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+import os
 
 
 def index(request):
@@ -11,24 +12,7 @@ def down(request):
     if url == "":
         return HttpResponse("hello youtubedl")
     else:
-        from . import youtube
-        youtube.down_video(url)
+        os.system("source /home/environment/my_django/bin/activate ;"
+                  "cd /home/yt_dlp_web/bilibili/ ; mkdir ./5554")
         return HttpResponse("down successful")
 
-
-from yt_dlp import YoutubeDL
-
-
-# def down_video(url):
-#     #pcpath
-#     path = "/home/chaoge/test/"
-#     #cloudpath
-#     #path="/home/data/"
-#     URLS=[url]
-#
-#     ydl_opts={
-#         'noplaylist': True,
-#         "outtmpl": path + '%(title)s.%(ext)s'
-#     }
-#     with YoutubeDL(ydl_opts) as ydl:
-#         ydl.download(URLS)
