@@ -19,7 +19,10 @@ from yt_dlp import YoutubeDL
 
 
 def down_video(url):
-    path = "/home/chaoge/test/"
+    #pcpath
+    #path = "/home/chaoge/test/"
+    #cloudpath
+    path="/home/"
     URLS=[url]
 
     ydl_opts={
