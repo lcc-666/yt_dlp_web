@@ -12,7 +12,7 @@ def down(request):
     if url == "":
         return HttpResponse("hello youtubedl")
     else:
-        os.system("source /home/environment/my_django/bin/activate ;"
-                  "cd /home/yt_dlp_web/bilibili/ ; mkdir ./5554")
+        import youtube
+        youtube.down_video(url)
         return HttpResponse("down successful")
 
