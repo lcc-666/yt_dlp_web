@@ -22,7 +22,7 @@ def down_video(url):
     #pcpath
     #path = "/home/chaoge/test/"
     #cloudpath
-    path="/home/"
+    path="/home/data/"
     URLS=[url]
 
     ydl_opts={
