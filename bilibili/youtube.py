@@ -1,11 +1,11 @@
 from yt_dlp import YoutubeDL
-
+import sys
 
 def down_video(url):
     # path
-    #path = "/home/chaoge/test/"
+    path = "/home/chaoge/test/"
     # cloudpath
-    path = "/home/data/"
+    #path = "/home/data/"
     URLS = [url]
 
     ydl_opts = {
@@ -17,7 +17,6 @@ def down_video(url):
 
 
 if __name__ == '__main__':
-    # URL="https://cn.pornhub.com/view_video.php?viewkey=ph63026168399b0"
-    word=input()
-    URL = word
+    #URL="https://cn.pornhub.com/view_video.php?viewkey=ph63026168399b0"
+    URL=sys.argv[1]
     down_video(URL)
