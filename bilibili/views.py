@@ -23,7 +23,7 @@ def down_video(url):
     # path
     # path = "/home/chaoge/test/"
     # cloudpath
-    path = "/home/data"
+    path = "/home/data/"
 
     # URLS = [url]
 
