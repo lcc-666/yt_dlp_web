@@ -36,7 +36,7 @@ def down_video(url):
             url,  # 视频链接
             download=True,  # 不下载只是抽取信息
         )
-    title = result["title"]
-    old = "/home/data/_.mp4"
-    new = "/home/data/%s.mp4" % title
-    shutil.move(old, new)
+    # title = result["title"]
+    # old = "/home/data/_.mp4"
+    # new = "/home/data/%s.mp4" % title
+    # shutil.move(old, new)
