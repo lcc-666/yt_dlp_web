@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-import shutil
+import datetime
 
 
 def index(request):
@@ -25,10 +25,11 @@ def down_video(url):
     # cloudpath
     # path = "/home/chaoge/info"
 
-    #URLS = [url]
+    # URLS = [url]
 
+    time = datetime.datetime.now()
     ydl_opts = {
-        'outtmpl': path + '%(title)s.%(ext)s',
+        'outtmpl': path + time + '.%(ext)s',
         'noplaylist': True
     }
     with YoutubeDL(ydl_opts) as ydl:
@@ -36,7 +37,3 @@ def down_video(url):
             url,  # 视频链接
             download=True,  # 不下载只是抽取信息
         )
-    # title = result["title"]
-    # old = "/home/data/_.mp4"
-    # new = "/home/data/%s.mp4" % title
-    # shutil.move(old, new)
