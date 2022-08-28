@@ -23,11 +23,11 @@ def down_video(url):
     # path
     # path = "/home/chaoge/test/"
     # cloudpath
-    # path = "/home/chaoge/info"
+    path = "/home/data"
 
     # URLS = [url]
 
-    time = datetime.datetime.now()
+    time = str(datetime.datetime.now())
     ydl_opts = {
         'outtmpl': path + time + '.%(ext)s',
         'noplaylist': True
