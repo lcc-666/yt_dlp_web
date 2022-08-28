@@ -21,9 +21,9 @@ from yt_dlp import YoutubeDL
 
 def down_video(url):
     # path
-    path = "/home/chaoge/test/"
+    # path = "/home/chaoge/test/"
     # cloudpath
-    # path = "/home/data/"
+    # path = "/home/chaoge/info"
 
     #URLS = [url]
 
