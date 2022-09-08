@@ -21,7 +21,7 @@ from yt_dlp import YoutubeDL
 
 
 def down_video(url):
-    path = "/home/data/"
+    path = "/home/data/down"
 
     time = str(datetime.datetime.now())
     ydl_opts = {
