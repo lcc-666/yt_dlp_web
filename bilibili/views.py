@@ -12,7 +12,8 @@ def down(request):
     if url == "":
         return HttpResponse("hello youtubedl")
     else:
-        down_video(url)
+        if "bilibili" in url:
+            down_video(url)
         return HttpResponse("down successful")
 
 
@@ -20,12 +21,7 @@ from yt_dlp import YoutubeDL
 
 
 def down_video(url):
-    # path
-    # path = "/home/chaoge/test/"
-    # cloudpath
     path = "/home/data/"
-
-    # URLS = [url]
 
     time = str(datetime.datetime.now())
     ydl_opts = {
